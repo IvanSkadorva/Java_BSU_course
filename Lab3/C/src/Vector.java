@@ -48,8 +48,15 @@ public class Vector {
         return result;
     }
 
-    double angleBetweenVectors( Vector v2){
+    double angleBetweenVectors(Vector v2) {
         return toDegrees(atan2(this.z, this.y) - atan2(v2.z, v2.y));
+    }
+
+    int getIndex(double number) {
+        if (this.x == number) return 0;
+        if (this.y == number) return 1;
+        if (this.z == number) return 2;
+        return 0;
     }
 
 
@@ -78,6 +85,7 @@ public class Vector {
     Vector crossProduct(Vector v2) {
         return new Vector(this.x * v2.y - this.y * v2.x, this.x * v2.z - this.z * v2.x, this.y * v2.z - this.z * v2.y);
     }
+
     double scalarProduct(Vector v2) {
         return this.x * v2.x + this.y * v2.y + this.z * v2.z;
     }
