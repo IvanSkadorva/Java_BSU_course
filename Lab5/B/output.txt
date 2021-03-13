@@ -1,0 +1,3 @@
+The insurance obligation of health with cost 45.0 and risk degree 2
+The insurance obligation of common with cost 533.0 and risk degree 9
+The insurance obligation of common with cost 2.3434234E7 and risk degree 1
