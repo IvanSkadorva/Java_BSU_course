@@ -84,10 +84,22 @@ public class Main {
         }
         return output;
     }
+    public static void saveToFile( ArrayList<String> result) throws FileNotFoundException {
+        File theDir = new File("C:/University/Java/Lab6/C/hello");
+        if (!theDir.exists()){
+            theDir.mkdirs();
+        }
+        PrintWriter pw = new PrintWriter(new FileOutputStream("C:/University/Java/Lab6/C/hello/out.txt"));
+            for (String item : result)
+                pw.println(item);
+            pw.close();
+    }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
+
         ArrayList<String> result = readFromFile("input.txt", 3, 2);
         System.out.println(result);
+        saveToFile(result);
     }
 }
